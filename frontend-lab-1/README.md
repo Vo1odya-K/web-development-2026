@@ -4,8 +4,10 @@
 Проєкт містить базову статичну вебсторінку з можливістю перемикання теми (світла/темна).
 
 ## Локальний запуск
-Відкрийте `index.html` за допомогою розширення Live Preview / Live Server у VS Code.
+1. Відкрийте папку `frontend-lab-1` у VS Code.
+2. Запустіть `index.html` за допомогою розширення **Live Preview** або **Live Server**.
 
 ## Публікації
-- **GitHub Pages:** https://<your-username>.github.io/<repository-name>/
-- **Vercel:** https://<project-name>.vercel.app/
+
+## Публікації
+- **GitHub Pages:** https://vo1odya-k.github.io/web-development-2026/frontend-lab-1/
