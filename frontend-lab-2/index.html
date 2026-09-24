@@ -3,87 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ЛР-2: Секція тарифних планів</title>
+
+    <title>Цінові плани — Basic, Pro та Enterprise</title>
+
+    <meta
+      name="description"
+      content="Порівняйте цінові плани FactSpace: Basic, Pro та Enterprise. Оберіть тариф із функціями, які відповідають вашим потребам."
+    />
+
+    <link rel="canonical" href="https://vo1odya-k.github.io/web-development-2026/frontend-lab-2/" />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <main class="pricing-section">
-      <div class="container">
-        <header class="pricing-header">
-          <h1 class="pricing-title">Оберіть свій тарифний план</h1>
-          <p class="pricing-subtitle">
-            Прості та прозорі тарифи для будь-яких завдань розробки. Скасовуйте або змінюйте в
-            будь-який час.
-          </p>
-        </header>
+    <header>
+      <a href="index.html">FactSpace App</a>
 
-        <div class="pricing-grid">
-          <!-- Тариф 1: Basic -->
-          <article class="card">
-            <header class="card-header">
-              <h2 class="card-title">Basic</h2>
-              <p class="card-description">Ідеально для початківців та знайомства з платформою.</p>
-            </header>
-            <div class="card-price">
-              <span class="price-value">$0</span>
-              <span class="price-period">/ місяць</span>
-            </div>
-            <ul class="card-features">
-              <li>Доступ до базових курсіва</li>
-              <li>Спільнота в Discord</li>
-              <li>Обмежений доступ до AI-помічника</li>
-              <li class="feature-disabled">Індивідуальне код-рев'ю</li>
-            </ul>
-            <footer class="card-footer">
-              <button class="btn btn-outline" type="button">Почати безкоштовно</button>
-            </footer>
-          </article>
+      <nav aria-label="Головна навігація">
+        <ul>
+          <li><a href="#pricing">Тарифи</a></li>
+          <li><a href="#contact">Контакти</a></li>
+          <li><a href="#features">Можливості</a></li>
+        </ul>
+      </nav>
+    </header>
 
-          <!-- Тариф 2: Pro (Featured) -->
-          <article class="card card-featured">
-            <div class="badge">Популярний</div>
-            <header class="card-header">
-              <h2 class="card-title">Pro</h2>
-              <p class="card-description">Найкращий вибір для студентів та активних розробників.</p>
-            </header>
-            <div class="card-price">
-              <span class="price-value">$19</span>
-              <span class="price-period">/ місяць</span>
-            </div>
-            <ul class="card-features">
-              <li>Доступ до всіх навчальних матеріалів</li>
-              <li>Пріоритетна підтримка менторів</li>
-              <li>Необмежений AI-асистент</li>
-              <li>Щотижневе код-рев'ю</li>
-            </ul>
-            <footer class="card-footer">
-              <button class="btn btn-primary" type="button">Обрати Pro</button>
-            </footer>
-          </article>
+    <main>
+      <section id="pricing" class="pricing-section">
+        <div class="container">
+          <header class="pricing-header">
+            <h1 class="pricing-title">Оберіть свій тарифний план</h1>
 
-          <!-- Тариф 3: Enterprise -->
-          <article class="card">
-            <header class="card-header">
-              <h2 class="card-title">Enterprise</h2>
-              <p class="card-description">Для команд і проєктів з розширеними потребами.</p>
-            </header>
-            <div class="card-price">
-              <span class="price-value">$49</span>
-              <span class="price-period">/ місяць</span>
-            </div>
-            <ul class="card-features">
-              <li>Все, що є в тарифі Pro</li>
-              <li>Персональний ментор</li>
-              <li>Виділені ресурси для деплою</li>
-              <li>Сертифікат про закінчення</li>
-            </ul>
-            <footer class="card-footer">
-              <button class="btn btn-outline" type="button">Зв'язатися з нами</button>
-            </footer>
-          </article>
+            <p class="pricing-subtitle">
+              Прості та прозорі тарифи для різних потреб розробки. Оберіть план, який відповідає
+              вашим завданням.
+            </p>
+          </header>
+
+          <h2>Тарифні плани</h2>
+
+          <div class="pricing-grid">
+            <article class="card">
+              <header class="card-header">
+                <h3 class="card-title">Basic</h3>
+
+                <p class="card-description">Ідеально для початківців та знайомства з платформою.</p>
+              </header>
+
+              <div class="card-price">
+                <span class="price-value">$0</span>
+                <span class="price-period">/ місяць</span>
+              </div>
+
+              <ul class="card-features">
+                <li>Доступ до базових курсів</li>
+                <li>Спільнота в Discord</li>
+                <li>Обмежений доступ до AI-помічника</li>
+                <li class="feature-disabled">Індивідуальне код-рев'ю</li>
+              </ul>
+
+              <footer class="card-footer">
+                <a class="btn btn-outline" href="#pricing"> Почати безкоштовно </a>
+              </footer>
+            </article>
+
+            <article class="card card-featured">
+              <div class="badge">Популярний</div>
+
+              <header class="card-header">
+                <h3 class="card-title">Pro</h3>
+
+                <p class="card-description">
+                  Для студентів та активних розробників, яким потрібні розширені можливості.
+                </p>
+              </header>
+
+              <div class="card-price">
+                <span class="price-value">$19</span>
+                <span class="price-period">/ місяць</span>
+              </div>
+
+              <ul class="card-features">
+                <li>Доступ до всіх навчальних матеріалів</li>
+                <li>Пріоритетна підтримка менторів</li>
+                <li>Необмежений AI-асистент</li>
+                <li>Щотижневе код-рев'ю</li>
+              </ul>
+
+              <footer class="card-footer">
+                <a class="btn btn-primary" href="#pricing"> Обрати Pro </a>
+              </footer>
+            </article>
+
+            <article class="card">
+              <header class="card-header">
+                <h3 class="card-title">Enterprise</h3>
+
+                <p class="card-description">Для команд і проєктів із розширеними потребами.</p>
+              </header>
+
+              <div class="card-price">
+                <span class="price-value">$49</span>
+                <span class="price-period">/ місяць</span>
+              </div>
+
+              <ul class="card-features">
+                <li>Все, що є в тарифі Pro</li>
+                <li>Персональний ментор</li>
+                <li>Виділені ресурси для деплою</li>
+                <li>Сертифікат про закінчення</li>
+              </ul>
+
+              <footer class="card-footer">
+                <a class="btn btn-outline" href="#contact"> Зв'язатися з нами </a>
+              </footer>
+            </article>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section id="features" aria-labelledby="features-title">
+        <div class="container">
+          <h2 id="features-title">Можливості платформи</h2>
+
+          <p>
+            FactSpace пропонує навчальні матеріали, AI-асистента, підтримку менторів та інструменти
+            для роботи над проєктами.
+          </p>
+        </div>
+      </section>
     </main>
+
+    <footer id="contact">
+      <p>&copy; 2026 FactSpace App. Усі права захищені.</p>
+    </footer>
 
     <script src="script.js" defer></script>
   </body>

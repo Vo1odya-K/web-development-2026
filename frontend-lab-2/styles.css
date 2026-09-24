@@ -63,11 +63,10 @@ body {
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   align-items: stretch;
-}
-
-@media (min-width: 768px) {
-  .pricing-grid {
-    grid-template-columns: repeat(3, 1fr);
+  @media (min-width: 768px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -190,3 +189,10 @@ body {
   background-color: var(--bg-main);
   border-color: var(--text-muted);
 }
+
+/*
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
