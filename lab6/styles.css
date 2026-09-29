@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
