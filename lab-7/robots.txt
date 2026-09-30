@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vo1odya-k.github.io/web-development-2026/lab-4/sitemap.xml
+Sitemap: https://vo1odya-k.github.io/web-development-2026/lab-7/sitemap.xml
