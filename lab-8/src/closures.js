@@ -13,9 +13,14 @@
  * @returns {Counter}
  */
 export function createCounter(start = 0) {
-  throw new Error('Not implemented');
-}
+  let current = start;
 
+  return {
+    increment: () => ++current,
+    reset: () => (current = start),
+    value: () => current,
+  };
+}
 /**
  * C5.2. Обгортає `fn` так, що вона виконується щонайбільше один раз.
  * Специфікація — ТЗ, C5.
@@ -25,7 +30,16 @@ export function createCounter(start = 0) {
  * @returns {F}
  */
 export function once(fn) {
-  throw new Error('Not implemented');
+  let executed = false;
+  let result;
+
+  return function (...args) {
+    if (!executed) {
+      executed = true;
+      result = fn(...args);
+    }
+    return result;
+  };
 }
 
 /**
@@ -37,5 +51,14 @@ export function once(fn) {
  * @returns {(arg: T) => R}
  */
 export function memoize(fn) {
-  throw new Error('Not implemented');
+  const cache = new Map();
+
+  return function (arg) {
+    if (cache.has(arg)) {
+      return cache.get(arg);
+    }
+    const result = fn(arg);
+    cache.set(arg, result);
+    return result;
+  };
 }
