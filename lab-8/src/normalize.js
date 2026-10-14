@@ -28,5 +28,37 @@
  * @returns {Show}
  */
 export function normalizeShow(raw) {
-  throw new Error('Not implemented');
+  if (!raw || typeof raw !== 'object') {
+    return null;
+  }
+
+  const { id, name = '', genres = [], rating, premiered, runtime = null, network } = raw;
+
+  let avgRating = null;
+  if (rating && typeof rating === 'object' && 'average' in rating && rating.average !== null) {
+    avgRating = rating.average;
+  }
+
+  let year = null;
+  if (premiered && typeof premiered === 'string') {
+    const parsedYear = parseInt(premiered.slice(0, 4), 10);
+    if (!Number.isNaN(parsedYear)) {
+      year = parsedYear;
+    }
+  }
+
+  let networkName = null;
+  if (network && typeof network === 'object' && 'name' in network) {
+    networkName = network.name ?? null;
+  }
+
+  return {
+    id,
+    name: name ?? '',
+    year,
+    rating: avgRating,
+    runtime: runtime ?? null,
+    network: networkName,
+    genres: Array.isArray(genres) ? [...genres] : [],
+  };
 }
