@@ -157,20 +157,22 @@ export function initDetails(refresh) {
 
     const show = getShow(activeShowId);
     saveNote(show.id, { rating: value, text: noteText.value });
-    dialog.close();
+
     refresh();
     status.textContent = `Нотатку до ${show.name} збережено`;
 
-    const detailsButton = document.querySelector(
+    const newDetailsButton = document.querySelector(
       `#results li[data-id="${show.id}"] button[data-action="details"]`,
     );
-    if (detailsButton instanceof HTMLButtonElement) detailsButton.focus();
-    else returnFocus();
+    if (newDetailsButton instanceof HTMLButtonElement) {
+      opener = newDetailsButton;
+    }
+
+    dialog.close();
   });
 
   cancel.addEventListener('click', () => {
     dialog.close();
-    returnFocus();
   });
 
   dialog.addEventListener('close', returnFocus);
